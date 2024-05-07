@@ -1,0 +1,72 @@
+@import url('https://fonts.cdnfonts.com/css/general-sans');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+@layer {
+  /* CONFIG STYLE */
+  body {
+    @apply font-normal font-generalSans text-primary bg-whiteBg transition-all duration-500 ease-in-out m-0 p-0;
+  }
+
+  /* html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+  } */
+
+  *,
+  *::before,
+  *::after {
+    @apply m-0 p-0 box-border;
+  }
+
+  /* ::-webkit-scrollbar {
+    @apply w-4 h-4;
+  } */
+
+  /* ::-webkit-scrollbar-thumb {
+    @apply bg-[#344675] rounded-[100vh] border-solid border-4 border-darkBgSec;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-darkBgSec;
+  } */
+}
+
+@layer utilities {
+  .bor-b {
+    border-bottom: 1px solid #EDF2F7;
+  }
+  .active-tag{
+    @apply bg-[#E7F7EF] rounded-lg p-1 w-[88px] text-greenBg text-sm py-2 px-4 text-center font-medium;
+  }
+  .inactive-tag{
+    @apply bg-[#FFF0E6] rounded-lg p-1 w-[88px] text-orangeBg text-sm py-2 px-4 text-center font-medium;
+  }
+  .paid-tag{
+    @apply bg-[#F4F0FF] rounded-lg p-1 w-[70px] text-purpleBg text-sm py-2 px-4 text-center font-medium;
+  }
+  .unpaid-tag{
+    @apply bg-[#FEF7DC] rounded-lg p-1 w-[88px] text-yellowBg text-sm py-2 px-4 text-center font-medium;
+  }
+  .overdue-tag{
+    @apply bg-[#FFF0F0] rounded-lg p-1 w-[88px] text-redBg text-sm py-2 px-4 text-center font-medium;
+  }
+}
+
+@layer components {
+  .input-field {
+      @apply bg-grayBg w-full shadow-none  focus:outline-none outline-none border-none focus:border focus:border-solid px-4 py-5
+      focus:border-[#E2E1E1] rounded-md placeholder:text-[#8D8D99] font-medium text-sm ;
+  }
+  .more-details-icon{
+      @apply w-[33px] h-[18px]
+  }
+}
